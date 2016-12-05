@@ -1,0 +1,990 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+              Version K-2015.06-SP5-1 for linux64 - Feb 26, 2016 
+                                        
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25 /apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25
+read_sverilog crcif.sv,crc.sv
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+Loading db file '/apps/synopsys/I-2013.12-SP5/libraries/syn/dw_foundation.sldb'
+Loading db file '/apps/synopsys/K-2015.06-SP5-1_power_compiler/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/K-2015.06-SP5-1_power_compiler/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading sverilog files: '/home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crcif.sv' '/home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crcif.sv
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crcif.sv:5: List () of one, unnamed, port is ignored. (VER-988)
+Warning:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crcif.sv:16: The construct 'clocking' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv:1: Variables crossing hierarchy: interface content 'm.clk' may become connected to an inout port. (VER-735)
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv:1: Variables crossing hierarchy: interface content 'm.rst' may become connected to an inout port. (VER-735)
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv:1: Variables crossing hierarchy: interface content 'm.addr' may become connected to an inout port. (VER-735)
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv:1: Variables crossing hierarchy: interface content 'm.data_wr' may become connected to an inout port. (VER-735)
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv:1: Variables crossing hierarchy: interface content 'm.RW' may become connected to an inout port. (VER-735)
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv:1: Variables crossing hierarchy: interface content 'm.Sel' may become connected to an inout port. (VER-735)
+Information:  /home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv:1: Variables crossing hierarchy: interface content 'm.data_rd' may become connected to an inout port. (VER-735)
+
+Statistics for case statements in always block at line 58 in file
+	'/home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            92            |    auto/auto     |
+|           182            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine crc line 58 in file
+		'/home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      seed_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    crc_data_reg     | Flip-flop |  32   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    crc_data1_reg    | Flip-flop |  32   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      seed1_reg      | Flip-flop |  16   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    crc_poly_reg     | Flip-flop |  29   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    crc_poly_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    crc_ctrl_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc.db:crc'
+Loaded 1 design.
+Current design is 'crc'.
+crc
+create_clock m.clk -name clk -period 10
+Warning: It is dangerous to create a clock source on inout port 'm.clk'. (UID-376)
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_clock_uncertainty 0.25 clk
+1
+set_propagated_clock clk
+Information: set_input_delay values are added to the propagated clock skew. (TIM-113)
+1
+set_output_delay 0.5 -clock clk [all_outputs]
+1
+set all_inputs_wo_rst_clk [remove_from_collection [remove_from_collection [all_inputs] [get_port m.clk]] [get_port m.rst]]
+{m.addr[31] m.addr[30] m.addr[29] m.addr[28] m.addr[27] m.addr[26] m.addr[25] m.addr[24] m.addr[23] m.addr[22] m.addr[21] m.addr[20] m.addr[19] m.addr[18] m.addr[17] m.addr[16] m.addr[15] m.addr[14] m.addr[13] m.addr[12] m.addr[11] m.addr[10] m.addr[9] m.addr[8] m.addr[7] m.addr[6] m.addr[5] m.addr[4] m.addr[3] m.addr[2] m.addr[1] m.addr[0] m.data_wr[31] m.data_wr[30] m.data_wr[29] m.data_wr[28] m.data_wr[27] m.data_wr[26] m.data_wr[25] m.data_wr[24] m.data_wr[23] m.data_wr[22] m.data_wr[21] m.data_wr[20] m.data_wr[19] m.data_wr[18] m.data_wr[17] m.data_wr[16] m.data_wr[15] m.data_wr[14] m.data_wr[13] m.data_wr[12] m.data_wr[11] m.data_wr[10] m.data_wr[9] m.data_wr[8] m.data_wr[7] m.data_wr[6] m.data_wr[5] m.data_wr[4] m.data_wr[3] m.data_wr[2] m.data_wr[1] m.data_wr[0] m.RW m.Sel m.data_rd[31] m.data_rd[30] m.data_rd[29] m.data_rd[28] m.data_rd[27] m.data_rd[26] m.data_rd[25] m.data_rd[24] m.data_rd[23] m.data_rd[22] m.data_rd[21] m.data_rd[20] m.data_rd[19] m.data_rd[18] m.data_rd[17] m.data_rd[16] m.data_rd[15] m.data_rd[14] m.data_rd[13] m.data_rd[12] m.data_rd[11] m.data_rd[10] m.data_rd[9] m.data_rd[8] m.data_rd[7] m.data_rd[6] m.data_rd[5] m.data_rd[4] m.data_rd[3] m.data_rd[2] m.data_rd[1] m.data_rd[0]}
+set_driving_cell -lib_cell CND2X1 $all_inputs_wo_rst_clk
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay 0.6 -clock clk $all_inputs_wo_rst_clk
+1
+set_output_delay 0.6 -clock clk [all_outputs]
+1
+set_fix_hold [ get_clocks clk ]
+1
+set_output_delay 0.3 -clock clk [all_outputs]
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25"
+Library analysis succeeded.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.5.1 |   *     |
+| Licensed DW Building Blocks        | I-2013.12-DWBB_201312.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 32 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'crc'
+
+Loaded alib file './alib-52/tc240c.db_NOMIN25.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'crc'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+  Mapping Optimization (Phase 10)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:54    9186.0      1.77     148.8       0.0                              0.0000      0.00  
+    0:02:00    9814.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:00    9814.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:00    9814.5      0.00       0.0       0.0                              0.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:02:02    9813.5      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9775.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:02:03    9771.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:04    9461.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:04    9461.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:04    9461.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:05    9456.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:05    9255.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:05    9255.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:06    9255.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:06    9255.0      0.00       0.0       0.0                              0.0000      0.00  
+    0:02:06    9140.5      0.00       0.0       0.0                              0.0000      0.00  
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+update_timing
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+1
+report_timing -max_paths 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : crc
+Version: K-2015.06-SP5-1
+Date   : Tue Nov 29 21:14:33 2016
+****************************************
+
+Operating Conditions: NOMIN25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: crc_poly_reg[27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: crc_data1_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  crc_poly_reg[27]/CP (CFD2QX1)            0.00       0.00 r
+  crc_poly_reg[27]/Q (CFD2QX1)             0.57       0.57 r
+  U4263/Z (CIVX1)                          0.13       0.70 f
+  U5274/Z (CNR2X1)                         0.11       0.81 r
+  U5299/Z (CANR1XL)                        0.12       0.93 f
+  U5300/Z (CIVXL)                          0.07       1.00 r
+  U4885/Z (CMXI2XL)                        0.17       1.17 r
+  U5306/Z (COND3X1)                        0.14       1.31 f
+  U5307/Z (CENX1)                          0.16       1.48 f
+  U5308/Z (CENX1)                          0.13       1.61 r
+  U4238/Z (CNIVX1)                         0.15       1.76 r
+  U5317/Z (COND2X1)                        0.10       1.86 f
+  U5318/Z (COND4CX1)                       0.14       1.99 r
+  U5321/Z (CND2X2)                         0.11       2.10 f
+  U5352/Z (CNR2X2)                         0.09       2.20 r
+  U5363/Z (CIVX2)                          0.07       2.27 f
+  U4395/Z (CIVX2)                          0.04       2.31 r
+  U4001/Z (CNIVX3)                         0.16       2.46 r
+  U5499/Z (CND2X1)                         0.09       2.55 f
+  U5500/Z (CEO3X1)                         0.17       2.73 r
+  U5501/Z (CENX1)                          0.16       2.88 r
+  U5502/Z (CENX1)                          0.17       3.05 r
+  U5503/Z (CENX1)                          0.17       3.22 r
+  U5504/Z (CENX1)                          0.20       3.42 r
+  U5508/Z (CIVX2)                          0.15       3.57 f
+  U5510/Z (CND3X1)                         0.08       3.66 r
+  U5513/Z (CND3X2)                         0.12       3.78 f
+  U5514/Z (CENX2)                          0.15       3.92 f
+  U5515/Z (CIVX2)                          0.05       3.98 r
+  U4136/Z (CIVX3)                          0.06       4.04 f
+  U5516/Z (CNIVX2)                         0.18       4.21 f
+  U5524/Z (CANR2XL)                        0.15       4.36 r
+  U5525/Z (CND3X1)                         0.16       4.52 f
+  U5555/Z (CEO3X1)                         0.26       4.77 f
+  U5586/Z (CENX1)                          0.13       4.90 f
+  U5651/Z (CEN3X2)                         0.43       5.33 r
+  U5652/Z (CND2X2)                         0.09       5.42 f
+  U5696/Z (CENX2)                          0.15       5.56 f
+  U5777/Z0 (CIVDX2)                        0.09       5.65 r
+  U5825/Z (CENX1)                          0.17       5.82 r
+  U5826/Z (CND2X2)                         0.10       5.92 f
+  U5829/Z (CENX2)                          0.22       6.15 r
+  U5940/Z (CND2X2)                         0.12       6.27 f
+  U5986/Z (CND2X2)                         0.06       6.33 r
+  U5987/Z (CENX2)                          0.14       6.47 r
+  U6359/Z0 (CIVDX2)                        0.10       6.57 f
+  U3961/Z (CNR2X1)                         0.10       6.67 r
+  U6050/Z (CENX1)                          0.17       6.84 r
+  U4342/Z (CENX1)                          0.20       7.04 r
+  U6052/Z (CENX2)                          0.20       7.24 r
+  U6228/Z (CNIVX4)                         0.19       7.43 r
+  U6231/Z (COND1X1)                        0.07       7.50 f
+  U4337/Z (CAN2XL)                         0.13       7.63 f
+  U4583/Z (CND2X1)                         0.07       7.71 r
+  U6232/Z (CIVX2)                          0.05       7.76 f
+  U6240/Z (CND2X2)                         0.06       7.82 r
+  U6312/Z (CND2IX1)                        0.11       7.93 r
+  U6314/Z (CND3X1)                         0.10       8.03 f
+  U6315/Z (CENX1)                          0.16       8.19 r
+  U6316/Z (CNIVX4)                         0.20       8.39 r
+  U8566/Z (CND2X1)                         0.10       8.50 f
+  U8622/Z (CENX1)                          0.14       8.63 f
+  U8623/Z (CENX1)                          0.16       8.79 f
+  U8625/Z (CANR1X1)                        0.10       8.89 r
+  U8626/Z (COAN1X1)                        0.16       9.05 r
+  U8628/Z (CND2X2)                         0.08       9.13 f
+  U8629/Z (CND2X1)                         0.05       9.18 r
+  U8630/Z (COND3X1)                        0.11       9.29 f
+  U4170/Z (CANR1XL)                        0.13       9.42 r
+  U8645/Z (CND2XL)                         0.09       9.51 f
+  crc_data1_reg[3]/D (CFD4QXL)             0.00       9.51 f
+  data arrival time                                   9.51
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  crc_data1_reg[3]/CP (CFD4QXL)            0.00       9.75 r
+  library setup time                      -0.24       9.51
+  data required time                                  9.51
+  -----------------------------------------------------------
+  data required time                                  9.51
+  data arrival time                                  -9.51
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: crc_poly_reg[27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: crc_data1_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  crc_poly_reg[27]/CP (CFD2QX1)            0.00       0.00 r
+  crc_poly_reg[27]/Q (CFD2QX1)             0.57       0.57 r
+  U4263/Z (CIVX1)                          0.13       0.70 f
+  U5274/Z (CNR2X1)                         0.11       0.81 r
+  U5299/Z (CANR1XL)                        0.12       0.93 f
+  U5300/Z (CIVXL)                          0.07       1.00 r
+  U4885/Z (CMXI2XL)                        0.17       1.17 r
+  U5306/Z (COND3X1)                        0.14       1.31 f
+  U5307/Z (CENX1)                          0.16       1.48 f
+  U5308/Z (CENX1)                          0.13       1.61 r
+  U4238/Z (CNIVX1)                         0.15       1.76 r
+  U5317/Z (COND2X1)                        0.10       1.86 f
+  U5318/Z (COND4CX1)                       0.14       1.99 r
+  U5321/Z (CND2X2)                         0.11       2.10 f
+  U5352/Z (CNR2X2)                         0.09       2.20 r
+  U5363/Z (CIVX2)                          0.07       2.27 f
+  U4395/Z (CIVX2)                          0.04       2.31 r
+  U4001/Z (CNIVX3)                         0.16       2.46 r
+  U5499/Z (CND2X1)                         0.09       2.55 f
+  U5500/Z (CEO3X1)                         0.17       2.73 r
+  U5501/Z (CENX1)                          0.16       2.88 r
+  U5502/Z (CENX1)                          0.17       3.05 r
+  U5503/Z (CENX1)                          0.17       3.22 r
+  U5504/Z (CENX1)                          0.20       3.42 r
+  U5508/Z (CIVX2)                          0.15       3.57 f
+  U5510/Z (CND3X1)                         0.08       3.66 r
+  U5513/Z (CND3X2)                         0.12       3.78 f
+  U5514/Z (CENX2)                          0.15       3.92 f
+  U5515/Z (CIVX2)                          0.05       3.98 r
+  U4136/Z (CIVX3)                          0.06       4.04 f
+  U5516/Z (CNIVX2)                         0.18       4.21 f
+  U5524/Z (CANR2XL)                        0.15       4.36 r
+  U5525/Z (CND3X1)                         0.16       4.52 f
+  U5555/Z (CEO3X1)                         0.26       4.77 f
+  U5586/Z (CENX1)                          0.13       4.90 f
+  U5651/Z (CEN3X2)                         0.43       5.33 r
+  U5652/Z (CND2X2)                         0.09       5.42 f
+  U5696/Z (CENX2)                          0.15       5.56 f
+  U5777/Z0 (CIVDX2)                        0.09       5.65 r
+  U5825/Z (CENX1)                          0.17       5.82 r
+  U5826/Z (CND2X2)                         0.10       5.92 f
+  U5829/Z (CENX2)                          0.22       6.15 r
+  U5940/Z (CND2X2)                         0.12       6.27 f
+  U5986/Z (CND2X2)                         0.06       6.33 r
+  U5987/Z (CENX2)                          0.14       6.47 r
+  U6359/Z0 (CIVDX2)                        0.10       6.57 f
+  U3961/Z (CNR2X1)                         0.10       6.67 r
+  U6050/Z (CENX1)                          0.17       6.84 r
+  U4342/Z (CENX1)                          0.20       7.04 r
+  U6052/Z (CENX2)                          0.20       7.24 r
+  U6228/Z (CNIVX4)                         0.19       7.43 r
+  U6231/Z (COND1X1)                        0.07       7.50 f
+  U4337/Z (CAN2XL)                         0.13       7.63 f
+  U4583/Z (CND2X1)                         0.07       7.71 r
+  U6232/Z (CIVX2)                          0.05       7.76 f
+  U6240/Z (CND2X2)                         0.06       7.82 r
+  U6312/Z (CND2IX1)                        0.11       7.93 r
+  U6314/Z (CND3X1)                         0.10       8.03 f
+  U6315/Z (CENX1)                          0.16       8.19 r
+  U6316/Z (CNIVX4)                         0.20       8.39 r
+  U8566/Z (CND2X1)                         0.10       8.50 f
+  U8622/Z (CENX1)                          0.14       8.63 f
+  U8623/Z (CENX1)                          0.16       8.79 f
+  U8625/Z (CANR1X1)                        0.10       8.89 r
+  U8626/Z (COAN1X1)                        0.16       9.05 r
+  U8628/Z (CND2X2)                         0.08       9.13 f
+  U8646/Z (CND2X1)                         0.05       9.18 r
+  U8647/Z (COND3X1)                        0.11       9.29 f
+  U4272/Z (CANR1XL)                        0.13       9.42 r
+  U8649/Z (CND2XL)                         0.09       9.51 f
+  crc_data1_reg[4]/D (CFD4QXL)             0.00       9.51 f
+  data arrival time                                   9.51
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  crc_data1_reg[4]/CP (CFD4QXL)            0.00       9.75 r
+  library setup time                      -0.24       9.51
+  data required time                                  9.51
+  -----------------------------------------------------------
+  data required time                                  9.51
+  data arrival time                                  -9.51
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: crc_poly_reg[27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: crc_data1_reg[27]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  crc_poly_reg[27]/CP (CFD2QX1)            0.00       0.00 r
+  crc_poly_reg[27]/Q (CFD2QX1)             0.57       0.57 r
+  U4263/Z (CIVX1)                          0.13       0.70 f
+  U5274/Z (CNR2X1)                         0.11       0.81 r
+  U5299/Z (CANR1XL)                        0.12       0.93 f
+  U5300/Z (CIVXL)                          0.07       1.00 r
+  U4885/Z (CMXI2XL)                        0.17       1.17 r
+  U5306/Z (COND3X1)                        0.14       1.31 f
+  U5307/Z (CENX1)                          0.16       1.48 f
+  U5308/Z (CENX1)                          0.13       1.61 r
+  U4238/Z (CNIVX1)                         0.15       1.76 r
+  U5317/Z (COND2X1)                        0.10       1.86 f
+  U5318/Z (COND4CX1)                       0.14       1.99 r
+  U5321/Z (CND2X2)                         0.11       2.10 f
+  U5352/Z (CNR2X2)                         0.09       2.20 r
+  U5363/Z (CIVX2)                          0.07       2.27 f
+  U4395/Z (CIVX2)                          0.04       2.31 r
+  U4001/Z (CNIVX3)                         0.16       2.46 r
+  U5499/Z (CND2X1)                         0.09       2.55 f
+  U5500/Z (CEO3X1)                         0.17       2.73 r
+  U5501/Z (CENX1)                          0.16       2.88 r
+  U5502/Z (CENX1)                          0.17       3.05 r
+  U5503/Z (CENX1)                          0.17       3.22 r
+  U5504/Z (CENX1)                          0.20       3.42 r
+  U5508/Z (CIVX2)                          0.15       3.57 f
+  U5510/Z (CND3X1)                         0.08       3.66 r
+  U5513/Z (CND3X2)                         0.12       3.78 f
+  U5514/Z (CENX2)                          0.15       3.92 f
+  U5515/Z (CIVX2)                          0.05       3.98 r
+  U4136/Z (CIVX3)                          0.06       4.04 f
+  U5516/Z (CNIVX2)                         0.18       4.21 f
+  U5524/Z (CANR2XL)                        0.15       4.36 r
+  U5525/Z (CND3X1)                         0.16       4.52 f
+  U5555/Z (CEO3X1)                         0.26       4.77 f
+  U5586/Z (CENX1)                          0.13       4.90 f
+  U5651/Z (CEN3X2)                         0.43       5.33 r
+  U5652/Z (CND2X2)                         0.09       5.42 f
+  U5696/Z (CENX2)                          0.15       5.56 f
+  U5777/Z0 (CIVDX2)                        0.09       5.65 r
+  U5825/Z (CENX1)                          0.17       5.82 r
+  U5826/Z (CND2X2)                         0.10       5.92 f
+  U5829/Z (CENX2)                          0.22       6.15 r
+  U5940/Z (CND2X2)                         0.12       6.27 f
+  U5986/Z (CND2X2)                         0.06       6.33 r
+  U5987/Z (CENX2)                          0.14       6.47 r
+  U6359/Z0 (CIVDX2)                        0.10       6.57 f
+  U3961/Z (CNR2X1)                         0.10       6.67 r
+  U6050/Z (CENX1)                          0.17       6.84 r
+  U4342/Z (CENX1)                          0.20       7.04 r
+  U6052/Z (CENX2)                          0.20       7.24 r
+  U6228/Z (CNIVX4)                         0.19       7.43 r
+  U6231/Z (COND1X1)                        0.07       7.50 f
+  U4337/Z (CAN2XL)                         0.13       7.63 f
+  U4583/Z (CND2X1)                         0.07       7.71 r
+  U6232/Z (CIVX2)                          0.05       7.76 f
+  U6240/Z (CND2X2)                         0.06       7.82 r
+  U6312/Z (CND2IX1)                        0.11       7.93 r
+  U6314/Z (CND3X1)                         0.10       8.03 f
+  U6315/Z (CENX1)                          0.16       8.19 r
+  U6316/Z (CNIVX4)                         0.20       8.39 r
+  U8566/Z (CND2X1)                         0.10       8.50 f
+  U8622/Z (CENX1)                          0.14       8.63 f
+  U8623/Z (CENX1)                          0.16       8.79 f
+  U8625/Z (CANR1X1)                        0.10       8.89 r
+  U8626/Z (COAN1X1)                        0.16       9.05 r
+  U8628/Z (CND2X2)                         0.08       9.13 f
+  U8650/Z (CND2X1)                         0.05       9.18 r
+  U8651/Z (COND3X1)                        0.11       9.29 f
+  U4470/Z (CANR1XL)                        0.13       9.42 r
+  U8653/Z (CND2XL)                         0.09       9.51 f
+  crc_data1_reg[27]/D (CFD4QXL)            0.00       9.51 f
+  data arrival time                                   9.51
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  crc_data1_reg[27]/CP (CFD4QXL)           0.00       9.75 r
+  library setup time                      -0.24       9.51
+  data required time                                  9.51
+  -----------------------------------------------------------
+  data required time                                  9.51
+  data arrival time                                  -9.51
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: crc_poly_reg[27]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: crc_data1_reg[28]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  crc_poly_reg[27]/CP (CFD2QX1)            0.00       0.00 r
+  crc_poly_reg[27]/Q (CFD2QX1)             0.57       0.57 r
+  U4263/Z (CIVX1)                          0.13       0.70 f
+  U5274/Z (CNR2X1)                         0.11       0.81 r
+  U5299/Z (CANR1XL)                        0.12       0.93 f
+  U5300/Z (CIVXL)                          0.07       1.00 r
+  U4885/Z (CMXI2XL)                        0.17       1.17 r
+  U5306/Z (COND3X1)                        0.14       1.31 f
+  U5307/Z (CENX1)                          0.16       1.48 f
+  U5308/Z (CENX1)                          0.13       1.61 r
+  U4238/Z (CNIVX1)                         0.15       1.76 r
+  U5317/Z (COND2X1)                        0.10       1.86 f
+  U5318/Z (COND4CX1)                       0.14       1.99 r
+  U5321/Z (CND2X2)                         0.11       2.10 f
+  U5352/Z (CNR2X2)                         0.09       2.20 r
+  U5363/Z (CIVX2)                          0.07       2.27 f
+  U4395/Z (CIVX2)                          0.04       2.31 r
+  U4001/Z (CNIVX3)                         0.16       2.46 r
+  U5499/Z (CND2X1)                         0.09       2.55 f
+  U5500/Z (CEO3X1)                         0.17       2.73 r
+  U5501/Z (CENX1)                          0.16       2.88 r
+  U5502/Z (CENX1)                          0.17       3.05 r
+  U5503/Z (CENX1)                          0.17       3.22 r
+  U5504/Z (CENX1)                          0.20       3.42 r
+  U5508/Z (CIVX2)                          0.15       3.57 f
+  U5510/Z (CND3X1)                         0.08       3.66 r
+  U5513/Z (CND3X2)                         0.12       3.78 f
+  U5514/Z (CENX2)                          0.15       3.92 f
+  U5515/Z (CIVX2)                          0.05       3.98 r
+  U4136/Z (CIVX3)                          0.06       4.04 f
+  U5516/Z (CNIVX2)                         0.18       4.21 f
+  U5524/Z (CANR2XL)                        0.15       4.36 r
+  U5525/Z (CND3X1)                         0.16       4.52 f
+  U5555/Z (CEO3X1)                         0.26       4.77 f
+  U5586/Z (CENX1)                          0.13       4.90 f
+  U5651/Z (CEN3X2)                         0.43       5.33 r
+  U5652/Z (CND2X2)                         0.09       5.42 f
+  U5696/Z (CENX2)                          0.15       5.56 f
+  U5777/Z0 (CIVDX2)                        0.09       5.65 r
+  U5825/Z (CENX1)                          0.17       5.82 r
+  U5826/Z (CND2X2)                         0.10       5.92 f
+  U5829/Z (CENX2)                          0.22       6.15 r
+  U5940/Z (CND2X2)                         0.12       6.27 f
+  U5986/Z (CND2X2)                         0.06       6.33 r
+  U5987/Z (CENX2)                          0.14       6.47 r
+  U6359/Z0 (CIVDX2)                        0.10       6.57 f
+  U3961/Z (CNR2X1)                         0.10       6.67 r
+  U6050/Z (CENX1)                          0.17       6.84 r
+  U4342/Z (CENX1)                          0.20       7.04 r
+  U6052/Z (CENX2)                          0.20       7.24 r
+  U6228/Z (CNIVX4)                         0.19       7.43 r
+  U6231/Z (COND1X1)                        0.07       7.50 f
+  U4337/Z (CAN2XL)                         0.13       7.63 f
+  U4583/Z (CND2X1)                         0.07       7.71 r
+  U6232/Z (CIVX2)                          0.05       7.76 f
+  U6240/Z (CND2X2)                         0.06       7.82 r
+  U6312/Z (CND2IX1)                        0.11       7.93 r
+  U6314/Z (CND3X1)                         0.10       8.03 f
+  U6315/Z (CENX1)                          0.16       8.19 r
+  U6316/Z (CNIVX4)                         0.20       8.39 r
+  U8566/Z (CND2X1)                         0.10       8.50 f
+  U8622/Z (CENX1)                          0.14       8.63 f
+  U8623/Z (CENX1)                          0.16       8.79 f
+  U8625/Z (CANR1X1)                        0.10       8.89 r
+  U8626/Z (COAN1X1)                        0.16       9.05 r
+  U8628/Z (CND2X2)                         0.08       9.13 f
+  U8654/Z (CND2X1)                         0.05       9.18 r
+  U8655/Z (COND3X1)                        0.11       9.29 f
+  U4171/Z (CANR1XL)                        0.13       9.42 r
+  U8657/Z (CND2XL)                         0.09       9.51 f
+  crc_data1_reg[28]/D (CFD4QXL)            0.00       9.51 f
+  data arrival time                                   9.51
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  crc_data1_reg[28]/CP (CFD4QXL)           0.00       9.75 r
+  library setup time                      -0.24       9.51
+  data required time                                  9.51
+  -----------------------------------------------------------
+  data required time                                  9.51
+  data arrival time                                  -9.51
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: crc_poly_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: crc_data1_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (propagated)         0.00       0.00
+  crc_poly_reg[8]/CP (CFD2QXL)             0.00       0.00 r
+  crc_poly_reg[8]/Q (CFD2QXL)              0.50       0.50 r
+  U4058/Z0 (CIVDX1)                        0.20       0.70 f
+  U6012/Z (CNR2X1)                         0.25       0.94 r
+  U6613/Z (CANR2XL)                        0.19       1.13 f
+  U6614/Z (CND3XL)                         0.12       1.26 r
+  U6615/Z (CENX1)                          0.16       1.42 r
+  U6622/Z (CEO3X1)                         0.40       1.82 f
+  U6623/Z (CENX1)                          0.16       1.98 f
+  U6625/Z (CENX1)                          0.17       2.14 f
+  U6626/Z (CENX2)                          0.18       2.33 f
+  U4148/Z (CIVX2)                          0.06       2.39 r
+  U6633/Z (CND2X2)                         0.08       2.47 f
+  U6634/Z (CENX2)                          0.15       2.62 f
+  U6635/Z (CNR2X2)                         0.08       2.70 r
+  U6658/Z (CENX1)                          0.16       2.86 r
+  U4215/Z (CENX1)                          0.18       3.04 r
+  U3997/Z (CNIVX1)                         0.14       3.18 r
+  U6686/Z (CND2X2)                         0.06       3.24 f
+  U6710/Z (CENX1)                          0.20       3.43 r
+  U3992/Z (CND2IX1)                        0.12       3.56 f
+  U3991/Z (CENX1)                          0.18       3.74 f
+  U6832/Z (CND2X1)                         0.07       3.81 r
+  U6833/Z (CENX1)                          0.16       3.97 r
+  U6837/Z (CENX1)                          0.21       4.18 r
+  U6853/Z (CENX2)                          0.18       4.36 r
+  U6885/Z (CIVX2)                          0.07       4.43 f
+  U6888/Z (CNR2X2)                         0.06       4.50 r
+  U6889/Z (CND2X1)                         0.09       4.58 f
+  U6893/Z (CND3X2)                         0.07       4.66 r
+  U6991/Z (CND3X1)                         0.12       4.78 f
+  U6992/Z (CND2X2)                         0.05       4.83 r
+  U6993/Z (CIVX2)                          0.04       4.87 f
+  U6994/Z (CND3X1)                         0.09       4.96 r
+  U6995/Z (CND2X2)                         0.11       5.07 f
+  U6996/Z (CENX2)                          0.14       5.21 f
+  U6998/Z (COND4CX1)                       0.14       5.35 r
+  U6999/Z (CND2X2)                         0.11       5.46 f
+  U7077/Z (CEO3X2)                         0.29       5.74 f
+  U4616/Z (CND2IX1)                        0.06       5.80 r
+  U7119/Z (COND1X1)                        0.11       5.91 f
+  U7120/Z (CND2X2)                         0.07       5.98 r
+  U7121/Z (CENX2)                          0.14       6.11 r
+  U7167/Z (CIVX2)                          0.08       6.20 f
+  U7169/Z (CENX2)                          0.14       6.34 f
+  U7170/Z (CIVX2)                          0.04       6.38 r
+  U7171/Z (CNIVXL)                         0.20       6.58 r
+  U7172/Z (CND2X2)                         0.09       6.67 f
+  U3962/Z (CNR2X1)                         0.11       6.77 r
+  U7217/Z (CNR2X2)                         0.07       6.84 f
+  U7218/Z (CIVX2)                          0.04       6.88 r
+  U7244/Z (CND2X2)                         0.06       6.94 f
+  U7249/Z (CND3X2)                         0.09       7.02 r
+  U7321/Z (CMX2GX1)                        0.25       7.28 f
+  U7322/Z (CNR2X2)                         0.10       7.38 r
+  U7323/Z (CENX2)                          0.16       7.54 r
+  U7325/Z (CENX2)                          0.19       7.73 r
+  U7368/Z (COND1X1)                        0.12       7.84 f
+  U7369/Z (CIVX2)                          0.05       7.89 r
+  U7370/Z (CND2X2)                         0.07       7.96 f
+  U7371/Z (CENX2)                          0.15       8.11 r
+  U7426/Z (CENX1)                          0.19       8.30 r
+  U7427/Z (CND2X2)                         0.08       8.38 f
+  U7428/Z (CEO3X2)                         0.19       8.56 f
+  U7434/Z (CNIVX4)                         0.15       8.72 f
+  U7943/Z (CND2X2)                         0.04       8.76 r
+  U4049/Z (CND2X1)                         0.07       8.83 f
+  U7945/Z (CIVX2)                          0.05       8.87 r
+  U7946/Z (CND3X2)                         0.09       8.97 f
+  U7947/Z (CENX1)                          0.16       9.13 f
+  U7962/Z (CANR1X2)                        0.10       9.23 r
+  U7963/Z (CENX2)                          0.16       9.39 r
+  U8112/Z (COND3X1)                        0.11       9.50 f
+  crc_data1_reg[2]/D (CFD4QXL)             0.00       9.50 f
+  data arrival time                                   9.50
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (propagated)         0.00      10.00
+  clock uncertainty                       -0.25       9.75
+  crc_data1_reg[2]/CP (CFD4QXL)            0.00       9.75 r
+  library setup time                      -0.25       9.50
+  data required time                                  9.50
+  -----------------------------------------------------------
+  data required time                                  9.50
+  data arrival time                                  -9.50
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+write -hierarchy -format verilog -output crc_gates.v
+Writing verilog file '/home/010728900@SJSUAD.SJSU.EDU/3_semester/EE272/bus_master_final/crc_gates.v'.
+1
+quit
+
+Thank you...
